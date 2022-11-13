@@ -1,0 +1,363 @@
+header {
+    background-color: transparent;
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    position: fixed;
+    z-index: 3;
+}
+
+nav{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .Enlaces li{
+    padding: 10px;
+    list-style: none;
+    display: inline-block;
+}
+
+.Enlaces a{
+    text-decoration: none;
+    color: rgb(189, 189, 189);
+    transition: all 0.5s ease-out;
+}
+
+.Enlaces a:hover{
+    color: white;
+}
+
+.Logo img{
+    width: 46px;
+    height: 29.5px;
+}
+
+
+.Destacado{
+    background-color: white;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+    border-radius: 5px;
+    position: relative;
+}
+
+.Destacado::after{
+    content: 'New';
+    background-color: red;
+    color: white;
+    position: absolute;
+    font-size: xx-small;
+    padding: 3px;
+    border-radius: 50%;
+    top: 8px;    
+    transform: rotate(10deg);
+}
+
+.Destacado a{
+    color: #000000 !important;
+}
+
+
+
+/* FONDO */
+.area{
+    background: #020202;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    width: 100%;
+    height:100vh;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+
+/* FINAL DE FONDO */
+
+.Banner{
+    position: relative;
+    height: 100vh;
+}
+
+.Bienvenida {
+    position: absolute;
+    top: 30vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    text-align: center;
+    max-width: 50%;
+    margin: auto;
+    font-family: poppins;
+    z-index: 2;
+}
+
+.Bienvenida h1{
+    font-size: 5rem;
+    color: white;
+}
+
+.Bienvenida p, h3{
+    color: #838383;
+}
+
+.Bienvenida h3{
+    color: #949494;
+    width: 90%;
+    margin: auto;
+    font-weight: 400;
+}
+
+.down{
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    animation: flecha 3s linear infinite;
+    transition: all 0.5 ease-out;
+    cursor: pointer;
+    z-index: 2;
+}
+
+@keyframes flecha {
+
+    0%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+
+}
+
+.about-this{
+    display: flex;
+    padding-top: 100px;
+    margin-bottom: 100px;
+}
+
+.text h2 {
+    margin-bottom: 30px;
+}
+
+.text h2::after{
+    content: '';
+    display: block;
+    width: 180px;
+    height: 2px;
+    margin-top: 2px;
+    background-color: #101010;
+}
+
+.text p{
+    font-size: 1.3rem;
+}
+
+.image{
+    width: 40%;
+    display: flex;
+}
+
+.image img{
+    object-fit: contain;
+    width: -webkit-fill-available;
+}
+
+section#destacados{
+    position: relative;
+}
+
+
+@media (max-width: 900px){
+    .Bienvenida h1{
+        font-size: 2rem;
+    }
+
+    .Bienvenida {
+        top: 35vh;
+        max-width: 60%;
+    }
+
+    .about-this{
+        flex-direction: column;
+    }
+
+    .about-this .image{
+        width: 100%;
+    }
+
+    header{
+        height: auto;
+    }
+}
+
+
+.btn-menu{
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+ul.show{
+    top: 65px;
+}
+
+@media (max-width: 858px){
+    .btn-menu{
+        display: inline-block;
+    }
+
+    .menu-items{
+        position: fixed;
+        width: 100vw;
+        height: calc(100vh - 65px);
+        background-color: #101010ea;
+        top: -100vh;
+        text-align: center;
+        transition: all .4s;
+        display: flex;
+        left: 0;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .menu-items li{
+        line-height: 30px;
+    }
+
+    header {
+        height: 65px;
+    }
+
+    .Destacado::after{
+        display: none;
+    }
+}

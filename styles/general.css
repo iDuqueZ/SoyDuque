@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+@font-face {
+    font-family: poppins;
+    src: url("https://fonts.cdnfonts.com/css/poppins");
+}
+
+
+h1, h2, h3, h4, h5, h6, p, label, a {
+    font-family: poppins;
+    color: #202020;
+}
+
+ul {
+    margin-bottom: 0 !important;
+}
+
+a{
+    color: rgb(0, 110, 110);
+}
+
+body{
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: whitesmoke;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.container-0{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 60px;
+}
+
+.container-1{
+    width: 100vw;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* .container-1{
+    display: block;
+    overflow: auto;
+    height: 100vh;
+}
+
+.container-1::-webkit-scrollbar{
+    display: none;
+    background: none;
+    width: 8px;
+}
+
+.container-1::-webkit-scrollbar-track-piece{
+    background-color: transparent;
+}
+
+.container-1::-webkit-scrollbar-track{
+    background-color: transparent
+}
+
+.container-1::-webkit-scrollbar-thumb {
+    background: gray;
+    width: 8px;
+    border-radius: 5px;
+} */
+
+
+.volverArriba{
+    background-color: #030303;
+    border-radius: 5px;
+    max-width: 40px;
+    max-height: 40px;
+    transform: rotate(60deg);
+    color: white;
+    text-align: center;
+    position: fixed;
+    right: 2%;
+    bottom: 20px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+    opacity: 0;
+    border: solid white 0.3px;
+}
+
+.volverArriba i{
+    transform: rotate(-60deg);
+    padding: 10px;
+}
+
+img.card-img-top {
+    object-fit: cover;
+    height: 300px;
+}
+
+.card{
+    height: 500px !important;
+}
+
+.decoration {
+    background-color: black;
+    width: 122vw;
+    height: 200px;
+    position: absolute;
+    left: -20%;
+    top: 20%;
+    transform: rotate(-18deg);
+}
+
+@media (max-width: 900px){
+    .decoration{
+        display: none;
+    }
+
+    .card {
+        margin: auto;
+    }
+}
+
